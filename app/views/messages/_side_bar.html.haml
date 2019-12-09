@@ -1,0 +1,18 @@
+.side-bar 
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      %p.side-bar__user-name__top-items__name 
+        masa
+      %ul.side-bar__user-name__top-items__icon 
+        %li.side-bar__user-name__top-items__edit-user
+          = link_to "#" do
+            = icon('fas', 'edit')
+        %li.side-bar__user-name__top-items__new-group
+          = link_to "#" do
+            = icon('fas', 'cog')
+  .side-bar__group-list
+    = link_to "#", class: "side-bar__group-list__groups" do
+      %p.side-bar__group-list__groups__group-name
+        techchamp
+      %p.side-bar__group-list__groups__group-message
+        まだメッセージがありません
