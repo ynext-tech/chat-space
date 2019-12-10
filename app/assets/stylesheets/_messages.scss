@@ -32,23 +32,22 @@
       }
     }
   }
-  &__group-list {
+  .groups {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    &__groups {
-      color: #ffffff;
-      font-weight: bold;
+    .group {
       margin-bottom: 40px;
-      text-decoration: none;
-      &__group-name {
+      &__name {
         font-size: 15px;
         padding-top: 20px;
         padding-left: 20px;
         margin-bottom: 5px;
+        color: #ffffff;
       }
-      &__group-message {
+      &__message {
         padding-left: 20px;
         font-size: 11px;
+        color: #ffffff;
       }
     }
   }
