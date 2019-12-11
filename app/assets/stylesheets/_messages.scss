@@ -3,6 +3,10 @@
 }
 
 .side-bar {
+  a {
+    text-decoration: none;
+    color: white;
+  }
   width: 300px;
   height: 100vh;
   background-color: #253141;
@@ -25,9 +29,6 @@
         display: flex;
         li {
           margin-left: 5px;
-          a {
-            color: white;
-          }
         }
       }
     }
@@ -74,6 +75,10 @@
       &__member-list {
         color: #999999;
         font-size: 12px;
+        display: flex;
+        &__name {
+          padding-left: 5px;;
+        }
       }
     }
 
@@ -117,43 +122,45 @@
       }
     }
   }
-  &__message-form {
-    background-color: #d2d2d2;
+
+  .form {
+    background-color:#d2d2d2;
+    box-sizing: border-box;
     height: 90px;
     padding: 20px 40px;
-    &__new-message {
-      display: flex;
-      &__input-box {
-        position: relative;
-        display: flex;
-        width: 100%;
-        &__text {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
-        &__image {
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          &__file {
-            display: none;
-          }
-        }
-      }
-      &__submit-btn {
-      width: 100px;
+    &__message {
+      padding-left: 10px;
+      border: none;
+      float: left;
       height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: #38aef0;
-      color: white;
-      cursor: pointer;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      color: #434a54;
+      &__image {
+        font-size: 1.5rem;
+        line-height: 50px;
+        cursor: pointer;
       }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: #38aef0;
+      border: none;
+      color: white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      width: 100px;
+      cursor: pointer;
     }
   }
 }
