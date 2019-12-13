@@ -96,16 +96,17 @@
     }
   }
 
-  &__message-list {
+  .messages {
+    overflow: scroll;
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px;
-    &__box {
+    .message {
     padding-bottom: 46px;
-      &__info {
+      .upper-message {
         margin-bottom: 12px;
         display: flex;
-        &__name {
+        &__user-name {
           color: #333333;
           font-size: 16px;
           font-weight: bold;
@@ -116,9 +117,11 @@
           margin-left: 10px;
         }
       }
-      &__coments {
-        color: #434A54;
-        font-size: 14px;
+      .lower-message {
+        &__content {
+          color: #434A54;
+          font-size: 14px;
+        }
       }
     }
   }
